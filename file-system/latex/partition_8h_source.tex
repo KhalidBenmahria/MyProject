@@ -1,0 +1,94 @@
+\hypertarget{partition_8h_source}{}\doxysection{partition.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PARTITION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PARTITION\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}block.h"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}QTableWidget"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}file.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}rootdirectory.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}QTreeWidget"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_partition}{Partition}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \textcolor{keyword}{enum} \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partitionType}} \{ Inode = 0, Fat = 1\};}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_partition_a6bdb75b921567290bc067688e2f2b1f5}{Partition}}(QString name, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{bool} status, \textcolor{keywordtype}{int} blockSize, QTableWidget* table, \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partitionType}} type);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{// settter and getter}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} numBlocks() \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} size() \textcolor{keyword}{const};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} setNumBlocks(\textcolor{keywordtype}{int} numBlocks);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     QTableWidget *table() \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} setTable(QTableWidget *newTable);}
+\DoxyCodeLine{43     \textcolor{keyword}{const} QList<File> \&fileList() \textcolor{keyword}{const};}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} setFileList(\textcolor{keyword}{const} QList<File> \&newFileList);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} addFile(QString path, \mbox{\hyperlink{class_file}{File}}* f) = 0;}
+\DoxyCodeLine{47     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} deleteFile(QString filePath) = 0;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} addDirectory(QString name);}
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} deleteDirectory(QString path) = 0;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_partition_a6f95cecd0a1a25fe406c4c9619cfbfcd}{calulateFragmentation}}();}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_partition_a970c922ac2ba99f06912c0cd982823a8}{defrag}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}{moveFileToFront}}(\mbox{\hyperlink{class_entry}{Entry}}* ep) = 0;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{70     QList <File> \mbox{\hyperlink{class_partition_ac8f95827de3accb030079a089d702a1e}{m\_fileList}};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{74     \textcolor{keyword}{const} QString \&getName() \textcolor{keyword}{const};}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} setName(\textcolor{keyword}{const} QString \&newName);}
+\DoxyCodeLine{76     \textcolor{keywordtype}{int} blockSize() \textcolor{keyword}{const};}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} setBlockSize(\textcolor{keywordtype}{int} newBlockSize);}
+\DoxyCodeLine{78     \mbox{\hyperlink{class_directory}{Directory}}* \mbox{\hyperlink{class_partition_a667439c30c5a04dbf429ba7866a4dce1}{getDirectory}}(QString path);}
+\DoxyCodeLine{79     \mbox{\hyperlink{class_file}{File}}* getFile(QString filePath);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} freeBlocks() \textcolor{keyword}{const};}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} setFreeBlocks(\textcolor{keywordtype}{int} newFreeBlocks);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \mbox{\hyperlink{class_root_directory}{RootDirectory}} *rootDirectory() \textcolor{keyword}{const};}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} setRootDirectory(\mbox{\hyperlink{class_root_directory}{RootDirectory}} *newRootDirectory);}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87     QTreeWidget *treeWidget() \textcolor{keyword}{const};}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} setTreeWidget(QTreeWidget *newTreeWidget);}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90     \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partitionType}} type() \textcolor{keyword}{const};}
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} fragmentation() \textcolor{keyword}{const};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 }
+\DoxyCodeLine{98     QString \mbox{\hyperlink{class_partition_ac1e1510081bb7cd540bbeb4add1468a4}{typeString}}();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{105     \textcolor{keywordtype}{void} addDirectory(\mbox{\hyperlink{class_directory}{Directory}}* f);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{112     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_a9d76d893de2897bc39bf32accca9780d}{getFirstFreeBlock}}();}
+\DoxyCodeLine{117     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_aba23f0c8db8d12e131f8213c9ec845bb}{getLastFreeBlock}}();}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_partition_afda44228e405da0293490934a3bdc51c}{fillTable}}();}
+\DoxyCodeLine{132     \mbox{\hyperlink{class_block}{Block}}* \mbox{\hyperlink{class_partition_a2a305c8452a99ba1468964686eacf18d}{getBlock}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{136     \mbox{\hyperlink{class_root_directory}{RootDirectory}}* \mbox{\hyperlink{class_partition_a0ed91275e466bc3312df4f23cebf8620}{m\_rootDirectory}};}
+\DoxyCodeLine{140     QString \mbox{\hyperlink{class_partition_a291c6cdbfc717e32559aaa7b4aec7d35}{m\_name}};}
+\DoxyCodeLine{144     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_ad45d01a3e148cf94a811712c346e5ade}{m\_size}};}
+\DoxyCodeLine{148     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_partition_ae3bf7055caf168ea9a8b98dda819956a}{m\_status}};}
+\DoxyCodeLine{152     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_a96aa864f15e9f4114fcf3e0cc0d8774b}{m\_blockSize}};}
+\DoxyCodeLine{156     \mbox{\hyperlink{class_block}{Block}}* \mbox{\hyperlink{class_partition_a377091b7ef8abaf56e16ba7479c21700}{m\_blockList}};}
+\DoxyCodeLine{160     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_a799a40b291fd1643d163f188567b2054}{m\_numBlocks}};}
+\DoxyCodeLine{164     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_a51cabd51bad500caf0a49a8eb76f355b}{m\_freeBlocks}};}
+\DoxyCodeLine{168     QTableWidget* \mbox{\hyperlink{class_partition_a94ae1b76c5736d1c595d7a1d07db6efb}{m\_table}};}
+\DoxyCodeLine{172     QTreeWidget* \mbox{\hyperlink{class_partition_ae88226cf98105d022074805d61630389}{m\_treeWidget}};}
+\DoxyCodeLine{176     \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partitionType}} \mbox{\hyperlink{class_partition_add797dd5e28e55e081870d20fc0562c6}{m\_type}};}
+\DoxyCodeLine{180     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_partition_a7d94eabd4cef94554e15f063779f624a}{m\_fragmentation}};}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PARTITION\_H}}
+
+\end{DoxyCode}

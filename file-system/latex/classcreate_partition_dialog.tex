@@ -1,0 +1,92 @@
+\hypertarget{classcreate_partition_dialog}{}\doxysection{create\+Partition\+Dialog Class Reference}
+\label{classcreate_partition_dialog}\index{createPartitionDialog@{createPartitionDialog}}
+
+
+The \mbox{\hyperlink{classcreate_partition_dialog}{create\+Partition\+Dialog}} class.\+this class represents a dialog that will be seen when the user adds a new partition to the disk.  
+
+
+
+
+{\ttfamily \#include $<$createpartitiondialog.\+h$>$}
+
+Inheritance diagram for create\+Partition\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcreate_partition_dialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a0f7e76a5ded08da6851866725928794b}\label{classcreate_partition_dialog_a0f7e76a5ded08da6851866725928794b}} 
+void {\bfseries partition\+Size\+Slot} ()
+\begin{DoxyCompactList}\small\item\em this slot sets the member variable m\+\_\+\+Partition depending on the input of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a9ca8e41fac93256969f33fe54bd0c7c9}\label{classcreate_partition_dialog_a9ca8e41fac93256969f33fe54bd0c7c9}} 
+void {\bfseries block\+Size\+Slot} ()
+\begin{DoxyCompactList}\small\item\em this slot sets the member variable m\+\_\+size depending on the input of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a18be31574bf22f5c4cb4fe11344caca6}\label{classcreate_partition_dialog_a18be31574bf22f5c4cb4fe11344caca6}} 
+void {\bfseries partition\+Typ\+Slot} ()
+\begin{DoxyCompactList}\small\item\em this slot sets the member variable m\+\_\+type depending on the input of the user \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a4ffb4d6687b1c768c8024ecdad8ac480}\label{classcreate_partition_dialog_a4ffb4d6687b1c768c8024ecdad8ac480}} 
+void {\bfseries partition\+Name\+Slot} ()
+\begin{DoxyCompactList}\small\item\em this slot sets the member variable m\+\_\+name depending on the input of the user \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcreate_partition_dialog_a833854cb3087ae5ef7b5b93624edb8af}{create\+Partition\+Dialog}} (QWidget $\ast$parent=nullptr, int disk\+Size=0, QString name\+Taken=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classcreate_partition_dialog}{create\+Partition\+Dialog}} Constructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_abc91737ab8b496a32fadc309135bbccd}\label{classcreate_partition_dialog_abc91737ab8b496a32fadc309135bbccd}} 
+int {\bfseries partition\+Size} () const
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a09dd43aecd0480d8d32ff275ca26112b}\label{classcreate_partition_dialog_a09dd43aecd0480d8d32ff275ca26112b}} 
+void {\bfseries set\+Partition\+Size} (int new\+Partition\+Size)
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a94e9d7252cfadba43c96289e21617292}\label{classcreate_partition_dialog_a94e9d7252cfadba43c96289e21617292}} 
+int {\bfseries block\+Size} () const
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a0a72bc8c39f4a2ab80a7a4ca2c86f518}\label{classcreate_partition_dialog_a0a72bc8c39f4a2ab80a7a4ca2c86f518}} 
+void {\bfseries set\+Block\+Size} (int new\+Block\+Size)
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a749de5b0609e4745ae8ba45e43304376}\label{classcreate_partition_dialog_a749de5b0609e4745ae8ba45e43304376}} 
+const QString \& {\bfseries name} () const
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a189d40525e7e380f3d5c739259035a19}\label{classcreate_partition_dialog_a189d40525e7e380f3d5c739259035a19}} 
+void {\bfseries set\+Name} (const QString \&new\+Name)
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_a18714ac6a3dbfbb91ce665fd52c71a5d}\label{classcreate_partition_dialog_a18714ac6a3dbfbb91ce665fd52c71a5d}} 
+\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition\+::partition\+Type}} {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classcreate_partition_dialog_abc23e4f6053116d7e56194c0255afddf}\label{classcreate_partition_dialog_abc23e4f6053116d7e56194c0255afddf}} 
+void {\bfseries set\+Type} (\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition\+::partition\+Type}} new\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classcreate_partition_dialog}{create\+Partition\+Dialog}} class.\+this class represents a dialog that will be seen when the user adds a new partition to the disk. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcreate_partition_dialog_a833854cb3087ae5ef7b5b93624edb8af}\label{classcreate_partition_dialog_a833854cb3087ae5ef7b5b93624edb8af}} 
+\index{createPartitionDialog@{createPartitionDialog}!createPartitionDialog@{createPartitionDialog}}
+\index{createPartitionDialog@{createPartitionDialog}!createPartitionDialog@{createPartitionDialog}}
+\doxysubsubsection{\texorpdfstring{createPartitionDialog()}{createPartitionDialog()}}
+{\footnotesize\ttfamily create\+Partition\+Dialog\+::create\+Partition\+Dialog (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr},  }\item[{int}]{disk\+Size = {\ttfamily 0},  }\item[{QString}]{name\+Taken = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classcreate_partition_dialog}{create\+Partition\+Dialog}} Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+{\em disk\+Size} & \\
+\hline
+{\em name\+Taken} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+createpartitiondialog.\+h\item 
+createpartitiondialog.\+cpp\end{DoxyCompactItemize}

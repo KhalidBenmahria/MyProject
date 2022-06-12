@@ -1,0 +1,23 @@
+\hypertarget{fatfile_8h_source}{}\doxysection{fatfile.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FATFILE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FATFILE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <file.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_fat_file}{FatFile}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_file}{File}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_fat_file_a6cded078d653f56073f2e0ac8ae9db1f}{FatFile}}(QString name, QString typ, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{bool} status, QString creator): \mbox{\hyperlink{class_file}{File}}(name, typ, size, status, creator)\{\}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} startIndex() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} setStartIndex(\textcolor{keywordtype}{int} startIndex);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} m\_startIndex;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FATFILE\_H}}
+
+\end{DoxyCode}

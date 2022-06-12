@@ -1,0 +1,63 @@
+\hypertarget{disk_8h_source}{}\doxysection{disk.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DISK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DISK\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}partition.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}QTableWidget"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}fatpartition.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}inodepartition.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}QList"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_disk}{Disk}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_disk_a5ae7ad83f86168705e03afbd24f14787}{Disk}}(\textcolor{keywordtype}{int} size, QTableWidget* diskTable);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} size() \textcolor{keyword}{const};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} unallocatedSpace() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} setSize(\textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_disk_a738c7d3ab72e3b066c77aae793f5968d}{addPartition}}(QString name, \textcolor{keywordtype}{int} partitionSize, \textcolor{keywordtype}{int} blockSize, \textcolor{keywordtype}{int} type, \textcolor{keywordtype}{bool} status, QTableWidget* table);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_disk_afcfaaedd28083a8427f957d05692d9ec}{removePartition}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_disk}{\string~Disk}}();}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{comment}{// maximum number of partitions that the user can create}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} maxNumberPartitions = 2;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{//Partition partition1;}}
+\DoxyCodeLine{55     \textcolor{comment}{//Partition partition2;}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \mbox{\hyperlink{class_partition}{Partition}}* partitions[2];}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} numPartitions() \textcolor{keyword}{const};}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} setNumPartitions(\textcolor{keywordtype}{int} newNumPartitions);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{private}:}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{int} m\_size;}
+\DoxyCodeLine{73     \textcolor{keywordtype}{int} m\_numPartitions;}
+\DoxyCodeLine{77     \textcolor{keywordtype}{int} m\_unallocatedSpace;}
+\DoxyCodeLine{82     \textcolor{keywordtype}{int} startBlockPartition1;}
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} endBlockPartition1;}
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} startBlockPartition2;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} endBlockPartition2;}
+\DoxyCodeLine{100     QTableWidget* m\_table;}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} fillBlock(\textcolor{keywordtype}{int} index, QString text, QBrush color);}
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} fillDisk();}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \};}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DISK\_H}}
+
+\end{DoxyCode}

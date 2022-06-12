@@ -1,0 +1,51 @@
+\hypertarget{writecddialog_8h_source}{}\doxysection{writecddialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef WRITECDDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define WRITECDDIALOG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}QList"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}file.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}disk.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}qtreewidgetfile.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classwrite_cd_dialog}{writeCdDialog}};}
+\DoxyCodeLine{13 \}}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classwrite_cd_dialog}{writeCdDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     Q\_OBJECT}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \textcolor{keyword}{explicit} \mbox{\hyperlink{classwrite_cd_dialog_a3bc9abcd6e867a3d3149bfcd4195d508}{writeCdDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_disk}{Disk}}* disk = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{28     \textcolor{comment}{//Destructor}}
+\DoxyCodeLine{29     \mbox{\hyperlink{classwrite_cd_dialog}{\string~writeCdDialog}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{private}:}
+\DoxyCodeLine{35     Ui::writeCdDialog *ui;}
+\DoxyCodeLine{43     QTreeWidgetItem* generateDirectory(\mbox{\hyperlink{class_entry}{Entry}}* ep);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{50     \textcolor{keyword}{const} \textcolor{keywordtype}{int} m\_maxSize = 25;}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} m\_sizeLeft;}
+\DoxyCodeLine{59     QList<File*> m\_files;}
+\DoxyCodeLine{63     \mbox{\hyperlink{class_disk}{Disk}}* m\_disk;}
+\DoxyCodeLine{67     \mbox{\hyperlink{class_partition}{Partition}}* m\_partition;}
+\DoxyCodeLine{71     QString desktopPath;}
+\DoxyCodeLine{75     QTreeWidget* m\_tree;}
+\DoxyCodeLine{76     QList<File> getSelectedFiles();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} handleItemChanged(QTreeWidgetItem* item, \textcolor{keywordtype}{int} column);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} generateTree();}
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} writeCd();}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// WRITECDDIALOG\_H}}
+
+\end{DoxyCode}

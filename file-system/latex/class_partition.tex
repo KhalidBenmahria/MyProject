@@ -1,0 +1,349 @@
+\hypertarget{class_partition}{}\doxysection{Partition Class Reference}
+\label{class_partition}\index{Partition@{Partition}}
+
+
+This abstract class represents partition.  
+
+
+
+
+{\ttfamily \#include $<$partition.\+h$>$}
+
+Inheritance diagram for Partition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_partition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}\label{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}} 
+enum \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partition\+Type}} \{ {\bfseries Inode} = 0
+, {\bfseries Fat} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em The partition\+Type for the two types of the partition (Inode and Fat) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_partition_a6bdb75b921567290bc067688e2f2b1f5}{Partition}} (QString name, int size, bool status, int block\+Size, QTable\+Widget $\ast$table, \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partition\+Type}} type)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_partition}{Partition}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_ac05380db596fa4e6df0220292d6bc31f}\label{class_partition_ac05380db596fa4e6df0220292d6bc31f}} 
+int {\bfseries num\+Blocks} () const
+\item 
+\mbox{\Hypertarget{class_partition_a5d55549da57e7ed554ae50efaff81f73}\label{class_partition_a5d55549da57e7ed554ae50efaff81f73}} 
+int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{class_partition_afc6cbd8982d9ef23a3e21f49490eeb12}\label{class_partition_afc6cbd8982d9ef23a3e21f49490eeb12}} 
+void {\bfseries set\+Num\+Blocks} (int num\+Blocks)
+\item 
+\mbox{\Hypertarget{class_partition_a11240b5e42c8862222b23de562abd10f}\label{class_partition_a11240b5e42c8862222b23de562abd10f}} 
+QTable\+Widget $\ast$ {\bfseries table} () const
+\item 
+\mbox{\Hypertarget{class_partition_afd6cacfcb52c4418032968b36cbd2ba9}\label{class_partition_afd6cacfcb52c4418032968b36cbd2ba9}} 
+void {\bfseries set\+Table} (QTable\+Widget $\ast$new\+Table)
+\item 
+\mbox{\Hypertarget{class_partition_ad69b30c107f889fcc50129d0fc8d6513}\label{class_partition_ad69b30c107f889fcc50129d0fc8d6513}} 
+const QList$<$ \mbox{\hyperlink{class_file}{File}} $>$ \& {\bfseries file\+List} () const
+\item 
+\mbox{\Hypertarget{class_partition_ae2aa570145061b35315323c638029dfe}\label{class_partition_ae2aa570145061b35315323c638029dfe}} 
+void {\bfseries set\+File\+List} (const QList$<$ \mbox{\hyperlink{class_file}{File}} $>$ \&new\+File\+List)
+\item 
+virtual void \mbox{\hyperlink{class_partition_a3a1fcecdef29fb03596590cf661d34a2}{add\+File}} (QString path, \mbox{\hyperlink{class_file}{File}} $\ast$f)=0
+\item 
+virtual void \mbox{\hyperlink{class_partition_a7afe05aeb64e31fe17a2e33a8e51c145}{delete\+File}} (QString file\+Path)=0
+\item 
+\mbox{\Hypertarget{class_partition_ab481c58df1fdbe402a47baa14ce39b28}\label{class_partition_ab481c58df1fdbe402a47baa14ce39b28}} 
+void {\bfseries add\+Directory} (QString name)
+\item 
+virtual void \mbox{\hyperlink{class_partition_a4e7f8c518f18d2b51849029b4a5f617d}{delete\+Directory}} (QString path)=0
+\item 
+\mbox{\Hypertarget{class_partition_a6f95cecd0a1a25fe406c4c9619cfbfcd}\label{class_partition_a6f95cecd0a1a25fe406c4c9619cfbfcd}} 
+void {\bfseries calulate\+Fragmentation} ()
+\begin{DoxyCompactList}\small\item\em calulate\+Fragmentation This method calculats the fragmentation. It checks firs if the number of free Blocks = 0. If this is the cas, the fragmentation is 100 Otherwise it calculates the fragmenation using the formel (freemax/ free) $\ast$ 100 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a970c922ac2ba99f06912c0cd982823a8}\label{class_partition_a970c922ac2ba99f06912c0cd982823a8}} 
+void {\bfseries defrag} ()
+\begin{DoxyCompactList}\small\item\em defrag. This method goes through the entries in the root directory. If the entry is a directory, the files inside it will be moved to the front and if the entry is a file, it will also moved to the front. AT the end the fragmentation will be calculated \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}{move\+File\+To\+Front}} (\mbox{\hyperlink{class_entry}{Entry}} $\ast$ep)=0
+\begin{DoxyCompactList}\small\item\em move\+File\+To\+Front this method is precisely defined in the subclasses depending on the type of partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_ae06645b9814dcc096945654d9a1bf42d}\label{class_partition_ae06645b9814dcc096945654d9a1bf42d}} 
+const QString \& {\bfseries get\+Name} () const
+\item 
+\mbox{\Hypertarget{class_partition_a4ed881dda025dae7fd3e37256f7087a9}\label{class_partition_a4ed881dda025dae7fd3e37256f7087a9}} 
+void {\bfseries set\+Name} (const QString \&new\+Name)
+\item 
+\mbox{\Hypertarget{class_partition_aa264b8d79330685965633f1d885a02e2}\label{class_partition_aa264b8d79330685965633f1d885a02e2}} 
+int {\bfseries block\+Size} () const
+\item 
+\mbox{\Hypertarget{class_partition_a9b6aff830bf9a43929a0ec8541dfa707}\label{class_partition_a9b6aff830bf9a43929a0ec8541dfa707}} 
+void {\bfseries set\+Block\+Size} (int new\+Block\+Size)
+\item 
+\mbox{\hyperlink{class_directory}{Directory}} $\ast$ \mbox{\hyperlink{class_partition_a667439c30c5a04dbf429ba7866a4dce1}{get\+Directory}} (QString path)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_partition_a667439c30c5a04dbf429ba7866a4dce1}{Partition\+::get\+Directory}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a432b875dd54a98aed526e9ccbf5620d6}\label{class_partition_a432b875dd54a98aed526e9ccbf5620d6}} 
+\mbox{\hyperlink{class_file}{File}} $\ast$ {\bfseries get\+File} (QString file\+Path)
+\item 
+\mbox{\Hypertarget{class_partition_a4a3fa5ac8acb529bacf993dfbbccd85b}\label{class_partition_a4a3fa5ac8acb529bacf993dfbbccd85b}} 
+int {\bfseries free\+Blocks} () const
+\item 
+\mbox{\Hypertarget{class_partition_afe32d6c5397fdcddcc254f256584031a}\label{class_partition_afe32d6c5397fdcddcc254f256584031a}} 
+void {\bfseries set\+Free\+Blocks} (int new\+Free\+Blocks)
+\item 
+\mbox{\Hypertarget{class_partition_a2e3cedc04179a713506f2d1af560cc3b}\label{class_partition_a2e3cedc04179a713506f2d1af560cc3b}} 
+\mbox{\hyperlink{class_root_directory}{Root\+Directory}} $\ast$ {\bfseries root\+Directory} () const
+\item 
+\mbox{\Hypertarget{class_partition_ade27eaf0f38965b257adc067c492cca7}\label{class_partition_ade27eaf0f38965b257adc067c492cca7}} 
+void {\bfseries set\+Root\+Directory} (\mbox{\hyperlink{class_root_directory}{Root\+Directory}} $\ast$new\+Root\+Directory)
+\item 
+\mbox{\Hypertarget{class_partition_adba9290cf33ff9f610d78ae461c181f4}\label{class_partition_adba9290cf33ff9f610d78ae461c181f4}} 
+QTree\+Widget $\ast$ {\bfseries tree\+Widget} () const
+\item 
+\mbox{\Hypertarget{class_partition_a48a2e237c3688d271bfb1948d9e1b1f6}\label{class_partition_a48a2e237c3688d271bfb1948d9e1b1f6}} 
+void {\bfseries set\+Tree\+Widget} (QTree\+Widget $\ast$new\+Tree\+Widget)
+\item 
+\mbox{\Hypertarget{class_partition_ab488b2cc076c6b37d35a9bb06ba67172}\label{class_partition_ab488b2cc076c6b37d35a9bb06ba67172}} 
+\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partition\+Type}} {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{class_partition_a6c2c81128a894be12abf426c0ea75797}\label{class_partition_a6c2c81128a894be12abf426c0ea75797}} 
+int {\bfseries fragmentation} () const
+\item 
+QString \mbox{\hyperlink{class_partition_ac1e1510081bb7cd540bbeb4add1468a4}{type\+String}} ()
+\begin{DoxyCompactList}\small\item\em type\+String returns the type of the partition as a QString \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_partition_a09fb07d089b16892112a15bc0134cee6}{add\+Directory}} (\mbox{\hyperlink{class_directory}{Directory}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em add\+Directory adds a directory to m\+\_\+root\+Directory \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_partition_a9d76d893de2897bc39bf32accca9780d}{get\+First\+Free\+Block}} ()
+\begin{DoxyCompactList}\small\item\em get\+First\+Free\+Block \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_partition_aba23f0c8db8d12e131f8213c9ec845bb}{get\+Last\+Free\+Block}} ()
+\begin{DoxyCompactList}\small\item\em get\+Last\+Free\+Block \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_partition_ac8f95827de3accb030079a089d702a1e}\label{class_partition_ac8f95827de3accb030079a089d702a1e}} 
+QList$<$ \mbox{\hyperlink{class_file}{File}} $>$ {\bfseries m\+\_\+file\+List}
+\begin{DoxyCompactList}\small\item\em m\+\_\+file\+List \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_partition_afda44228e405da0293490934a3bdc51c}\label{class_partition_afda44228e405da0293490934a3bdc51c}} 
+void {\bfseries fill\+Table} ()
+\begin{DoxyCompactList}\small\item\em this method makes the tabel gui \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ \mbox{\hyperlink{class_partition_a2a305c8452a99ba1468964686eacf18d}{get\+Block}} (int index)
+\begin{DoxyCompactList}\small\item\em get\+Block \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_partition_a0ed91275e466bc3312df4f23cebf8620}\label{class_partition_a0ed91275e466bc3312df4f23cebf8620}} 
+\mbox{\hyperlink{class_root_directory}{Root\+Directory}} $\ast$ {\bfseries m\+\_\+root\+Directory}
+\begin{DoxyCompactList}\small\item\em represents the root directory of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a291c6cdbfc717e32559aaa7b4aec7d35}\label{class_partition_a291c6cdbfc717e32559aaa7b4aec7d35}} 
+QString {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em m\+\_\+name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_ad45d01a3e148cf94a811712c346e5ade}\label{class_partition_ad45d01a3e148cf94a811712c346e5ade}} 
+int {\bfseries m\+\_\+size}
+\begin{DoxyCompactList}\small\item\em size of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_ae3bf7055caf168ea9a8b98dda819956a}\label{class_partition_ae3bf7055caf168ea9a8b98dda819956a}} 
+bool {\bfseries m\+\_\+status}
+\begin{DoxyCompactList}\small\item\em status of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a96aa864f15e9f4114fcf3e0cc0d8774b}\label{class_partition_a96aa864f15e9f4114fcf3e0cc0d8774b}} 
+int {\bfseries m\+\_\+block\+Size}
+\begin{DoxyCompactList}\small\item\em the block size of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a377091b7ef8abaf56e16ba7479c21700}\label{class_partition_a377091b7ef8abaf56e16ba7479c21700}} 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ {\bfseries m\+\_\+block\+List}
+\begin{DoxyCompactList}\small\item\em m\+\_\+block\+List \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a799a40b291fd1643d163f188567b2054}\label{class_partition_a799a40b291fd1643d163f188567b2054}} 
+int {\bfseries m\+\_\+num\+Blocks}
+\begin{DoxyCompactList}\small\item\em number of the partitions block \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a51cabd51bad500caf0a49a8eb76f355b}\label{class_partition_a51cabd51bad500caf0a49a8eb76f355b}} 
+int {\bfseries m\+\_\+free\+Blocks}
+\begin{DoxyCompactList}\small\item\em the number of the free blocks of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a94ae1b76c5736d1c595d7a1d07db6efb}\label{class_partition_a94ae1b76c5736d1c595d7a1d07db6efb}} 
+QTable\+Widget $\ast$ {\bfseries m\+\_\+table}
+\begin{DoxyCompactList}\small\item\em m\+\_\+table \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_ae88226cf98105d022074805d61630389}\label{class_partition_ae88226cf98105d022074805d61630389}} 
+QTree\+Widget $\ast$ {\bfseries m\+\_\+tree\+Widget}
+\begin{DoxyCompactList}\small\item\em m\+\_\+tree\+Widget \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_add797dd5e28e55e081870d20fc0562c6}\label{class_partition_add797dd5e28e55e081870d20fc0562c6}} 
+\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partition\+Type}} {\bfseries m\+\_\+type}
+\begin{DoxyCompactList}\small\item\em the type of the partition \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_partition_a7d94eabd4cef94554e15f063779f624a}\label{class_partition_a7d94eabd4cef94554e15f063779f624a}} 
+int {\bfseries m\+\_\+fragmentation}
+\begin{DoxyCompactList}\small\item\em m\+\_\+fragmentation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This abstract class represents partition. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_partition_a6bdb75b921567290bc067688e2f2b1f5}\label{class_partition_a6bdb75b921567290bc067688e2f2b1f5}} 
+\index{Partition@{Partition}!Partition@{Partition}}
+\index{Partition@{Partition}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{Partition()}{Partition()}}
+{\footnotesize\ttfamily Partition\+::\+Partition (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{int}]{size,  }\item[{bool}]{status,  }\item[{int}]{block\+Size,  }\item[{QTable\+Widget $\ast$}]{table,  }\item[{\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partition\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_partition}{Partition}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em size} & \\
+\hline
+{\em status} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+{\em table} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_partition_a09fb07d089b16892112a15bc0134cee6}\label{class_partition_a09fb07d089b16892112a15bc0134cee6}} 
+\index{Partition@{Partition}!addDirectory@{addDirectory}}
+\index{addDirectory@{addDirectory}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{addDirectory()}{addDirectory()}}
+{\footnotesize\ttfamily void Partition\+::add\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_directory}{Directory}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+add\+Directory adds a directory to m\+\_\+root\+Directory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_partition_a3a1fcecdef29fb03596590cf661d34a2}\label{class_partition_a3a1fcecdef29fb03596590cf661d34a2}} 
+\index{Partition@{Partition}!addFile@{addFile}}
+\index{addFile@{addFile}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily virtual void Partition\+::add\+File (\begin{DoxyParamCaption}\item[{QString}]{path,  }\item[{\mbox{\hyperlink{class_file}{File}} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fat_partition_af46d24ba40aa50071cf63fc56aa0affb}{Fat\+Partition}}, and \mbox{\hyperlink{class_inode_partition_a5556270a3461eab091a32de64094b2d9}{Inode\+Partition}}.
+
+\mbox{\Hypertarget{class_partition_a4e7f8c518f18d2b51849029b4a5f617d}\label{class_partition_a4e7f8c518f18d2b51849029b4a5f617d}} 
+\index{Partition@{Partition}!deleteDirectory@{deleteDirectory}}
+\index{deleteDirectory@{deleteDirectory}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{deleteDirectory()}{deleteDirectory()}}
+{\footnotesize\ttfamily virtual void Partition\+::delete\+Directory (\begin{DoxyParamCaption}\item[{QString}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fat_partition_a61bbd0e8ae895fca368a3f2912af9788}{Fat\+Partition}}, and \mbox{\hyperlink{class_inode_partition_aae8c1b54416b674f377d0bd0167243a0}{Inode\+Partition}}.
+
+\mbox{\Hypertarget{class_partition_a7afe05aeb64e31fe17a2e33a8e51c145}\label{class_partition_a7afe05aeb64e31fe17a2e33a8e51c145}} 
+\index{Partition@{Partition}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}}
+{\footnotesize\ttfamily virtual void Partition\+::delete\+File (\begin{DoxyParamCaption}\item[{QString}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_fat_partition_aae9e31700787d903d2cd25a83826ed43}{Fat\+Partition}}, and \mbox{\hyperlink{class_inode_partition_a6ee83ef541bd2440097732e17f1e6bf3}{Inode\+Partition}}.
+
+\mbox{\Hypertarget{class_partition_a2a305c8452a99ba1468964686eacf18d}\label{class_partition_a2a305c8452a99ba1468964686eacf18d}} 
+\index{Partition@{Partition}!getBlock@{getBlock}}
+\index{getBlock@{getBlock}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{getBlock()}{getBlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_block}{Block}} $\ast$ Partition\+::get\+Block (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+get\+Block 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Block$\ast$ at the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_partition_a667439c30c5a04dbf429ba7866a4dce1}\label{class_partition_a667439c30c5a04dbf429ba7866a4dce1}} 
+\index{Partition@{Partition}!getDirectory@{getDirectory}}
+\index{getDirectory@{getDirectory}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{getDirectory()}{getDirectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_directory}{Directory}} $\ast$ Partition\+::get\+Directory (\begin{DoxyParamCaption}\item[{QString}]{path }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_partition_a667439c30c5a04dbf429ba7866a4dce1}{Partition\+::get\+Directory}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path to a directory or to a file eg.\+: C\+:/usr/test.txt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The directory 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_partition_a9d76d893de2897bc39bf32accca9780d}\label{class_partition_a9d76d893de2897bc39bf32accca9780d}} 
+\index{Partition@{Partition}!getFirstFreeBlock@{getFirstFreeBlock}}
+\index{getFirstFreeBlock@{getFirstFreeBlock}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{getFirstFreeBlock()}{getFirstFreeBlock()}}
+{\footnotesize\ttfamily int Partition\+::get\+First\+Free\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+First\+Free\+Block 
+
+\begin{DoxyReturn}{Returns}
+the index of the first free block in the partition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_partition_aba23f0c8db8d12e131f8213c9ec845bb}\label{class_partition_aba23f0c8db8d12e131f8213c9ec845bb}} 
+\index{Partition@{Partition}!getLastFreeBlock@{getLastFreeBlock}}
+\index{getLastFreeBlock@{getLastFreeBlock}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{getLastFreeBlock()}{getLastFreeBlock()}}
+{\footnotesize\ttfamily int Partition\+::get\+Last\+Free\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get\+Last\+Free\+Block 
+
+\begin{DoxyReturn}{Returns}
+the index of the last free block in the partition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}\label{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}} 
+\index{Partition@{Partition}!moveFileToFront@{moveFileToFront}}
+\index{moveFileToFront@{moveFileToFront}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{moveFileToFront()}{moveFileToFront()}}
+{\footnotesize\ttfamily virtual void Partition\+::move\+File\+To\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entry}{Entry}} $\ast$}]{ep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+move\+File\+To\+Front this method is precisely defined in the subclasses depending on the type of partition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_fat_partition_a9d31186fbcd029bcc750381537b4d8de}{Fat\+Partition}}, and \mbox{\hyperlink{class_inode_partition_a2382e5b4a8cfcbb73903b1a427e2c8aa}{Inode\+Partition}}.
+
+\mbox{\Hypertarget{class_partition_ac1e1510081bb7cd540bbeb4add1468a4}\label{class_partition_ac1e1510081bb7cd540bbeb4add1468a4}} 
+\index{Partition@{Partition}!typeString@{typeString}}
+\index{typeString@{typeString}!Partition@{Partition}}
+\doxysubsubsection{\texorpdfstring{typeString()}{typeString()}}
+{\footnotesize\ttfamily QString Partition\+::type\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+type\+String returns the type of the partition as a QString 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+partition.\+h\item 
+partition.\+cpp\end{DoxyCompactItemize}

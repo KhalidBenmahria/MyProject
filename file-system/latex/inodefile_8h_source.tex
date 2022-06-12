@@ -1,0 +1,26 @@
+\hypertarget{inodefile_8h_source}{}\doxysection{inodefile.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef INODEFILE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define INODEFILE\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <file.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_inode_file}{InodeFile}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_file}{File}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_inode_file_a90616b4fc8eaf89bfbbcafa5325cff2c}{InodeFile}}(QString name, QString typ, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{bool} status, QString creator): \mbox{\hyperlink{class_file}{File}}(name, typ, size, status, creator)}
+\DoxyCodeLine{20     \{}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_inode_file_a2476c371fd37f25d356821b781501af5}{length}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_inode_file_afdb3954ad596bd6f6a931efcae4004e0}{itemAt}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_file_a019206aab96a1c5c4d844950a2b6096a}{setItemAt}}(\textcolor{keywordtype}{int} index, \textcolor{keywordtype}{int} item);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_file_a739a96460347c33c0d0652b93ee878b7}{addIndex}}(\textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keyword}{private}:}
+\DoxyCodeLine{51     QList<int> m\_inodeTable;}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INODEFILE\_H}}
+
+\end{DoxyCode}

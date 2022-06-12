@@ -1,0 +1,102 @@
+\hypertarget{class_disk}{}\doxysection{Disk Class Reference}
+\label{class_disk}\index{Disk@{Disk}}
+
+
+This class represents a disk.  
+
+
+
+
+{\ttfamily \#include $<$disk.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_disk_a5ae7ad83f86168705e03afbd24f14787}{Disk}} (int size, QTable\+Widget $\ast$disk\+Table)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_disk}{Disk}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_a4f386cb6c188451ef3bad9a407151c74}\label{class_disk_a4f386cb6c188451ef3bad9a407151c74}} 
+int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{class_disk_a87e0835ab59390aac35a722d6b56dab5}\label{class_disk_a87e0835ab59390aac35a722d6b56dab5}} 
+int {\bfseries unallocated\+Space} () const
+\item 
+\mbox{\Hypertarget{class_disk_a1528df57578abade1df076a3921c2ca2}\label{class_disk_a1528df57578abade1df076a3921c2ca2}} 
+void {\bfseries set\+Size} (int size)
+\item 
+void \mbox{\hyperlink{class_disk_a738c7d3ab72e3b066c77aae793f5968d}{add\+Partition}} (QString name, int partition\+Size, int block\+Size, int type, bool status, QTable\+Widget $\ast$table)
+\begin{DoxyCompactList}\small\item\em add\+Partition This method creats either an inode partition or a fat partition depending on the type. type = 0 -\/-\/\texorpdfstring{$>$}{>}Fat \mbox{\hyperlink{class_partition}{Partition}}, type = 1 -\/-\/\texorpdfstring{$>$}{>} inode \mbox{\hyperlink{class_partition}{Partition}} This method calculates the number of Blocks for this partition. At the end the startblock and the endblock of the partition in the disk will be calculated \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_afcfaaedd28083a8427f957d05692d9ec}\label{class_disk_afcfaaedd28083a8427f957d05692d9ec}} 
+void {\bfseries remove\+Partition} ()
+\begin{DoxyCompactList}\small\item\em this method removes a partition from the disk \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_a02982f124ed456b77ed363f809a4902b}\label{class_disk_a02982f124ed456b77ed363f809a4902b}} 
+int {\bfseries num\+Partitions} () const
+\item 
+\mbox{\Hypertarget{class_disk_a50a5d6e86094b4c51191863b18f903be}\label{class_disk_a50a5d6e86094b4c51191863b18f903be}} 
+void {\bfseries set\+Num\+Partitions} (int new\+Num\+Partitions)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_disk_adf5d61984b37ff07c2e8d99a10d87953}\label{class_disk_adf5d61984b37ff07c2e8d99a10d87953}} 
+int {\bfseries max\+Number\+Partitions} = 2
+\item 
+\mbox{\Hypertarget{class_disk_ac2464b52658bdd0eefb5f6b9493b8c10}\label{class_disk_ac2464b52658bdd0eefb5f6b9493b8c10}} 
+\mbox{\hyperlink{class_partition}{Partition}} $\ast$ {\bfseries partitions} \mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a disk. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_disk_a5ae7ad83f86168705e03afbd24f14787}\label{class_disk_a5ae7ad83f86168705e03afbd24f14787}} 
+\index{Disk@{Disk}!Disk@{Disk}}
+\index{Disk@{Disk}!Disk@{Disk}}
+\doxysubsubsection{\texorpdfstring{Disk()}{Disk()}}
+{\footnotesize\ttfamily Disk\+::\+Disk (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{QTable\+Widget $\ast$}]{disk\+Table }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_disk}{Disk}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+{\em disk\+Table} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_disk_a738c7d3ab72e3b066c77aae793f5968d}\label{class_disk_a738c7d3ab72e3b066c77aae793f5968d}} 
+\index{Disk@{Disk}!addPartition@{addPartition}}
+\index{addPartition@{addPartition}!Disk@{Disk}}
+\doxysubsubsection{\texorpdfstring{addPartition()}{addPartition()}}
+{\footnotesize\ttfamily void Disk\+::add\+Partition (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{int}]{partition\+Size,  }\item[{int}]{block\+Size,  }\item[{int}]{type,  }\item[{bool}]{status,  }\item[{QTable\+Widget $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+add\+Partition This method creats either an inode partition or a fat partition depending on the type. type = 0 -\/-\/\texorpdfstring{$>$}{>}Fat \mbox{\hyperlink{class_partition}{Partition}}, type = 1 -\/-\/\texorpdfstring{$>$}{>} inode \mbox{\hyperlink{class_partition}{Partition}} This method calculates the number of Blocks for this partition. At the end the startblock and the endblock of the partition in the disk will be calculated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em partition\+Size} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+{\em type} & \\
+\hline
+{\em status} & \\
+\hline
+{\em table} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+disk.\+h\item 
+disk.\+cpp\end{DoxyCompactItemize}

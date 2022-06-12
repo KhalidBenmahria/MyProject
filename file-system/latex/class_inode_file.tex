@@ -1,0 +1,132 @@
+\hypertarget{class_inode_file}{}\doxysection{Inode\+File Class Reference}
+\label{class_inode_file}\index{InodeFile@{InodeFile}}
+
+
+The class represents an inode file.  
+
+
+
+
+{\ttfamily \#include $<$inodefile.\+h$>$}
+
+Inheritance diagram for Inode\+File\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_inode_file}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inode_file_a90616b4fc8eaf89bfbbcafa5325cff2c}{Inode\+File}} (QString name, QString typ, int size, bool status, QString creator)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_inode_file}{Inode\+File}} Constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_inode_file_a2476c371fd37f25d356821b781501af5}{length}} ()
+\begin{DoxyCompactList}\small\item\em length \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_inode_file_afdb3954ad596bd6f6a931efcae4004e0}{item\+At}} (int index)
+\begin{DoxyCompactList}\small\item\em item\+At \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inode_file_a019206aab96a1c5c4d844950a2b6096a}{set\+Item\+At}} (int index, int item)
+\begin{DoxyCompactList}\small\item\em sets an item at the index in the tabel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inode_file_a739a96460347c33c0d0652b93ee878b7}{add\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em pushs an index to the tabel \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The class represents an inode file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_inode_file_a90616b4fc8eaf89bfbbcafa5325cff2c}\label{class_inode_file_a90616b4fc8eaf89bfbbcafa5325cff2c}} 
+\index{InodeFile@{InodeFile}!InodeFile@{InodeFile}}
+\index{InodeFile@{InodeFile}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{InodeFile()}{InodeFile()}}
+{\footnotesize\ttfamily Inode\+File\+::\+Inode\+File (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{QString}]{typ,  }\item[{int}]{size,  }\item[{bool}]{status,  }\item[{QString}]{creator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_inode_file}{Inode\+File}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em typ} & \\
+\hline
+{\em size} & \\
+\hline
+{\em status} & \\
+\hline
+{\em creator} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inode_file_a739a96460347c33c0d0652b93ee878b7}\label{class_inode_file_a739a96460347c33c0d0652b93ee878b7}} 
+\index{InodeFile@{InodeFile}!addIndex@{addIndex}}
+\index{addIndex@{addIndex}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{addIndex()}{addIndex()}}
+{\footnotesize\ttfamily void Inode\+File\+::add\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+pushs an index to the tabel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_inode_file_afdb3954ad596bd6f6a931efcae4004e0}\label{class_inode_file_afdb3954ad596bd6f6a931efcae4004e0}} 
+\index{InodeFile@{InodeFile}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily int Inode\+File\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+item\+At 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value which is stored in the Tabel at the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inode_file_a2476c371fd37f25d356821b781501af5}\label{class_inode_file_a2476c371fd37f25d356821b781501af5}} 
+\index{InodeFile@{InodeFile}!length@{length}}
+\index{length@{length}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily int Inode\+File\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+length 
+
+\begin{DoxyReturn}{Returns}
+the length of m\+\_\+inode\+Table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_inode_file_a019206aab96a1c5c4d844950a2b6096a}\label{class_inode_file_a019206aab96a1c5c4d844950a2b6096a}} 
+\index{InodeFile@{InodeFile}!setItemAt@{setItemAt}}
+\index{setItemAt@{setItemAt}!InodeFile@{InodeFile}}
+\doxysubsubsection{\texorpdfstring{setItemAt()}{setItemAt()}}
+{\footnotesize\ttfamily void Inode\+File\+::set\+Item\+At (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{item }\end{DoxyParamCaption})}
+
+
+
+sets an item at the index in the tabel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em item} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inodefile.\+h\item 
+inodefile.\+cpp\end{DoxyCompactItemize}

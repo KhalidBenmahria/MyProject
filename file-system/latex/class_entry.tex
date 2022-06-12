@@ -1,0 +1,78 @@
+\hypertarget{class_entry}{}\doxysection{Entry Class Reference}
+\label{class_entry}\index{Entry@{Entry}}
+
+
+This class represents an entry.  
+
+
+
+
+{\ttfamily \#include $<$entry.\+h$>$}
+
+Inheritance diagram for Entry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_entry}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entry_a8283ac849b1f02ff82ca2ff28253db98}\label{class_entry_a8283ac849b1f02ff82ca2ff28253db98}} 
+{\bfseries Entry} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_entry}{Entry}} default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_entry_adae2fcc3c72d89eacd4df9031ed7c505}{Entry}} (QString name, bool directory\+Flag)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_entry}{Entry}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_entry_aa92e386fc3fed6b3c71b05aef91a3b9a}\label{class_entry_aa92e386fc3fed6b3c71b05aef91a3b9a}} 
+const QString \& {\bfseries name} () const
+\item 
+\mbox{\Hypertarget{class_entry_aba7faf5e202b4e15993fdb6ef5a2103c}\label{class_entry_aba7faf5e202b4e15993fdb6ef5a2103c}} 
+void {\bfseries set\+Name} (const QString \&new\+Name)
+\item 
+\mbox{\Hypertarget{class_entry_a0dd0d8eb5caae960e69da00f17f61ffe}\label{class_entry_a0dd0d8eb5caae960e69da00f17f61ffe}} 
+bool {\bfseries is\+Directory} () const
+\item 
+\mbox{\Hypertarget{class_entry_ab715f35bb645ae3d39d740e6de3c0bbb}\label{class_entry_ab715f35bb645ae3d39d740e6de3c0bbb}} 
+void {\bfseries set\+Directory\+Flag} (bool new\+Entry\+Flag)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entry_afdf1202acf802e386e5c47546f92349e}\label{class_entry_afdf1202acf802e386e5c47546f92349e}} 
+QString {\bfseries m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em name of the entry \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_entry_ab594b529464abdd13a989f74411b9e85}\label{class_entry_ab594b529464abdd13a989f74411b9e85}} 
+bool {\bfseries m\+\_\+directory\+Flag}
+\begin{DoxyCompactList}\small\item\em flag which shows whether the entry is a folder or a file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_entry_aef50d2959708e1e1bd21b29ef31d1701}\label{class_entry_aef50d2959708e1e1bd21b29ef31d1701}} 
+QTree\+Widget\+Item $\ast$ {\bfseries m\+\_\+item}
+\begin{DoxyCompactList}\small\item\em m\+\_\+item \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents an entry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entry_adae2fcc3c72d89eacd4df9031ed7c505}\label{class_entry_adae2fcc3c72d89eacd4df9031ed7c505}} 
+\index{Entry@{Entry}!Entry@{Entry}}
+\index{Entry@{Entry}!Entry@{Entry}}
+\doxysubsubsection{\texorpdfstring{Entry()}{Entry()}}
+{\footnotesize\ttfamily Entry\+::\+Entry (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{bool}]{directory\+Flag }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_entry}{Entry}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em directory\+Flag} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+entry.\+h\item 
+entry.\+cpp\end{DoxyCompactItemize}

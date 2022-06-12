@@ -1,0 +1,57 @@
+\hypertarget{creatfiledialog_8h_source}{}\doxysection{creatfiledialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CREATFILEDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CREATFILEDIALOG\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QStandardItemModel>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QList>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}partition.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}file.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}inodefile.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}fatfile.h"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_creat_file_dialog}{CreatFileDialog}};}
+\DoxyCodeLine{15 \}}
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_creat_file_dialog}{CreatFileDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     Q\_OBJECT}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_creat_file_dialog_aa27f6cf8ef6f82f249baacc35730c521}{CreatFileDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_partition}{Partition}}* partition = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{31     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_creat_file_dialog}{\string~CreatFileDialog}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{comment}{// Getter}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keyword}{const} QString \&name() \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{int} size() \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keyword}{const} QString \&creator() \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keyword}{const} QString \&path() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{keyword}{private}:}
+\DoxyCodeLine{46     Ui::CreatFileDialog *ui;}
+\DoxyCodeLine{50     \mbox{\hyperlink{class_partition}{Partition}}* m\_partition;}
+\DoxyCodeLine{54     QString m\_name;}
+\DoxyCodeLine{58     QString m\_size;}
+\DoxyCodeLine{62     QString m\_creator;}
+\DoxyCodeLine{66     QString m\_path;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} setSizeSlot();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} setNameSlot();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} setCreatorSlot();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} setPathSlot();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CREATFILEDIALOG\_H}}
+
+\end{DoxyCode}

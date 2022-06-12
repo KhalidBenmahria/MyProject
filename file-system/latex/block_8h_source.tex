@@ -1,0 +1,52 @@
+\hypertarget{block_8h_source}{}\doxysection{block.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BLOCK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BLOCK\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QTableWidgetItem>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_block}{Block}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \textcolor{keyword}{enum} \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{blockStatus}}\{Free = 0, Occupied = 1, Defect = 2\};}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_block_a39fbce2fa3bc409351184ca0e2a03faa}{Block}}(\textcolor{keywordtype}{int} index, \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{blockStatus}} status, QString data);}
+\DoxyCodeLine{27     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_block}{\string~Block}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \mbox{\hyperlink{class_block}{Block}} *nextBlock() \textcolor{keyword}{const};   }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} setNextBlock(\mbox{\hyperlink{class_block}{Block}} *nextBlock);    }
+\DoxyCodeLine{36     \mbox{\hyperlink{class_block}{Block}} *prevBlock() \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} setPrevBlock(\mbox{\hyperlink{class_block}{Block}} *prevBlock);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} index() \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} setIndex(\textcolor{keywordtype}{int} index);    }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     QString data() \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} setData(\textcolor{keyword}{const} QString \&data);}
+\DoxyCodeLine{43     QTableWidgetItem *item() \textcolor{keyword}{const};}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} setItem(QTableWidgetItem *newItem);}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{blockStatus}} status() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} setStatus(\mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{blockStatus}} newStatus);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_a2678949e928942868630764c3fdc3d9d}{writeBlock}}(QString data);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_block_a39ccb6e0c90388058d0c2e7384af3c49}{freeBlock}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \mbox{\hyperlink{class_block}{Block}}* m\_nextBlock;}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_block}{Block}}* m\_prevBlock;}
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} m\_index;}
+\DoxyCodeLine{66     \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{blockStatus}} \mbox{\hyperlink{class_block_af0d33bb3c51819a0e6eee93d78845489}{m\_status}};}
+\DoxyCodeLine{70     QString \mbox{\hyperlink{class_block_a0a5a881267038e179aec8ae797d052f3}{m\_data}};}
+\DoxyCodeLine{71     QTableWidgetItem* m\_item;}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BLOCK\_H}}
+
+\end{DoxyCode}

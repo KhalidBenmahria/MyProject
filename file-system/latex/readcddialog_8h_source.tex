@@ -1,0 +1,47 @@
+\hypertarget{readcddialog_8h_source}{}\doxysection{readcddialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef READCDDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define READCDDIALOG\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <file.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <disk.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classread_cd_dialog}{readCdDialog}};}
+\DoxyCodeLine{10 \}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classread_cd_dialog}{readCdDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     Q\_OBJECT}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{explicit} \mbox{\hyperlink{classread_cd_dialog_a3610ea40e8f01714f9b29d3feaefa2eb}{readCdDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_disk}{Disk}}* disk = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{26     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{27     \mbox{\hyperlink{classread_cd_dialog}{\string~readCdDialog}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{private}:}
+\DoxyCodeLine{30     \textcolor{comment}{// User interface}}
+\DoxyCodeLine{31     Ui::readCdDialog *ui;}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_disk}{Disk}}* m\_disk;}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition::partitionType}} m\_partitionType;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} stringToFile(QString fileString);}
+\DoxyCodeLine{47     QString filePath;}
+\DoxyCodeLine{51     QString desktopPath;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     QList<File*> m\_files;}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} createTable();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} setPartitionType();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} readCD();}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} setFilePath();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} copyFiles();}
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// READCDDIALOG\_H}}
+
+\end{DoxyCode}

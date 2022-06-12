@@ -1,0 +1,58 @@
+\hypertarget{createpartitiondialog_8h_source}{}\doxysection{createpartitiondialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef CREATEPARTITIONDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define CREATEPARTITIONDIALOG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}partition.h"{}}}
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classcreate_partition_dialog}{createPartitionDialog}};}
+\DoxyCodeLine{9 \}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classcreate_partition_dialog}{createPartitionDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     Q\_OBJECT}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{explicit} \mbox{\hyperlink{classcreate_partition_dialog_a833854cb3087ae5ef7b5b93624edb8af}{createPartitionDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \textcolor{keywordtype}{int} diskSize = 0, QString nameTaken = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{26     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{27     \mbox{\hyperlink{classcreate_partition_dialog}{\string~createPartitionDialog}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} partitionSize() \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} setPartitionSize(\textcolor{keywordtype}{int} newPartitionSize);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} blockSize() \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} setBlockSize(\textcolor{keywordtype}{int} newBlockSize);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keyword}{const} QString \&name() \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} setName(\textcolor{keyword}{const} QString \&newName);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition::partitionType}} type() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} setType(\mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition::partitionType}} newType);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{private}:}
+\DoxyCodeLine{48     QString m\_nameTaken;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keyword}{const} QString m\_possiblePartitionNames[4] = \{\textcolor{stringliteral}{"{}C:"{}},\textcolor{stringliteral}{"{}D:"{}},\textcolor{stringliteral}{"{}E:"{}},\textcolor{stringliteral}{"{}F:"{}}\};}
+\DoxyCodeLine{55     \textcolor{keyword}{const} \textcolor{keywordtype}{int} m\_numPossibleNames = 4;}
+\DoxyCodeLine{59     Ui::createPartitionDialog *ui;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} m\_partitionSize;}
+\DoxyCodeLine{67     \textcolor{keywordtype}{int} m\_blockSize;}
+\DoxyCodeLine{71     \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{Partition::partitionType}} m\_type;}
+\DoxyCodeLine{75     QString m\_name;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcreate_partition_dialog_a0f7e76a5ded08da6851866725928794b}{partitionSizeSlot}}();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcreate_partition_dialog_a9ca8e41fac93256969f33fe54bd0c7c9}{blockSizeSlot}}();}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcreate_partition_dialog_a18be31574bf22f5c4cb4fe11344caca6}{partitionTypSlot}}();}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} \mbox{\hyperlink{classcreate_partition_dialog_a4ffb4d6687b1c768c8024ecdad8ac480}{partitionNameSlot}}();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CREATEPARTITIONDIALOG\_H}}
+
+\end{DoxyCode}

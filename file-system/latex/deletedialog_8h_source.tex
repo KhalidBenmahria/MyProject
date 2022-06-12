@@ -1,0 +1,37 @@
+\hypertarget{deletedialog_8h_source}{}\doxysection{deletedialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DELETEDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DELETEDIALOG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}partition.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classdelete_dialog}{deleteDialog}};}
+\DoxyCodeLine{10 \}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classdelete_dialog}{deleteDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     Q\_OBJECT}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \textcolor{keyword}{explicit} \mbox{\hyperlink{classdelete_dialog_adfa6b3beaf14c8302b3a6db64587e2e8}{deleteDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_partition}{Partition}}* partition = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{26     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{27     \mbox{\hyperlink{classdelete_dialog}{\string~deleteDialog}}();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{comment}{// Getter}}
+\DoxyCodeLine{30     \textcolor{keyword}{const} QString \&path() \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     Ui::deleteDialog *ui;}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_partition}{Partition}}* m\_partition;}
+\DoxyCodeLine{44     QString m\_path;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} setPathSlot();}
+\DoxyCodeLine{51 \};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DELETEDIALOG\_H}}
+
+\end{DoxyCode}

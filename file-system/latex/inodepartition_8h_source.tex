@@ -1,0 +1,28 @@
+\hypertarget{inodepartition_8h_source}{}\doxysection{inodepartition.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef INODEPARTITION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define INODEPARTITION\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <inodefile.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <partition.h>}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_inode_partition}{InodePartition}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_partition}{Partition}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_inode_partition_aae468c06155d6e6ab200933abe96df53}{InodePartition}}(QString name, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{bool} status, \textcolor{keywordtype}{int} blockSize, QTableWidget* table):}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_partition}{Partition}}(name, size, status, blockSize, table, \mbox{\hyperlink{class_partition_a6060d7cbce4ffa83fcb5fb367a85d8d3}{partitionType}}::Inode)}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \mbox{\hyperlink{class_inode_file}{InodeFile}} *fileList() \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{comment}{//void setFileList(InodeFile *fileList);}}
+\DoxyCodeLine{34 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_partition_a5556270a3461eab091a32de64094b2d9}{addFile}}(QString path, \mbox{\hyperlink{class_file}{File}}* f);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_partition_a6ee83ef541bd2440097732e17f1e6bf3}{deleteFile}}(QString filePath);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_partition_aae8c1b54416b674f377d0bd0167243a0}{deleteDirectory}}(QString path);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_inode_partition_a2382e5b4a8cfcbb73903b1a427e2c8aa}{moveFileToFront}}(\mbox{\hyperlink{class_entry}{Entry}}* fp);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// INODEPARTITION\_H}}
+
+\end{DoxyCode}

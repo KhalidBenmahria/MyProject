@@ -1,0 +1,109 @@
+\hypertarget{class_tree_item}{}\doxysection{Tree\+Item Class Reference}
+\label{class_tree_item}\index{TreeItem@{TreeItem}}
+
+
+{\ttfamily \#include $<$treeitem.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_item_a2f621e067ee5b718830e8d31876bbbb8}{Tree\+Item}} (const QVector$<$ QVariant $>$ \&\mbox{\hyperlink{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}{data}}, \mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$\mbox{\hyperlink{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}{parent\+Item}}=nullptr)
+\item 
+\mbox{\hyperlink{class_tree_item_a859429185d908c3e54861bbbfb185425}{$\sim$\+Tree\+Item}} ()
+\item 
+void \mbox{\hyperlink{class_tree_item_ac7f432ac0587ca037e80857eefd622f8}{append\+Child}} (\mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$\mbox{\hyperlink{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}{child}})
+\item 
+\mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$ \mbox{\hyperlink{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}{child}} (int \mbox{\hyperlink{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}{row}})
+\item 
+int \mbox{\hyperlink{class_tree_item_a14551ec37f50067974fc93aa78b4b6e1}{child\+Count}} () const
+\item 
+int \mbox{\hyperlink{class_tree_item_a3314c3678d8ea4dee2f736c32f7b28b9}{column\+Count}} () const
+\item 
+QVariant \mbox{\hyperlink{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}{data}} (int column) const
+\item 
+int \mbox{\hyperlink{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}{row}} () const
+\item 
+\mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$ \mbox{\hyperlink{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}{parent\+Item}} ()
+\item 
+const QVector$<$ QVariant $>$ \& \mbox{\hyperlink{class_tree_item_a91b228aa174755563086a48f6a9baaea}{item\+Data}} () const
+\item 
+void \mbox{\hyperlink{class_tree_item_a7bdd3659250b6f3c97c51388ce656997}{set\+Item\+Data}} (const QVector$<$ QVariant $>$ \&new\+Item\+Data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tree_item_a2f621e067ee5b718830e8d31876bbbb8}\label{class_tree_item_a2f621e067ee5b718830e8d31876bbbb8}} 
+\index{TreeItem@{TreeItem}!TreeItem@{TreeItem}}
+\index{TreeItem@{TreeItem}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{TreeItem()}{TreeItem()}}
+{\footnotesize\ttfamily Tree\+Item\+::\+Tree\+Item (\begin{DoxyParamCaption}\item[{const QVector$<$ QVariant $>$ \&}]{data,  }\item[{\mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$}]{parent\+Item = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_tree_item_a859429185d908c3e54861bbbfb185425}\label{class_tree_item_a859429185d908c3e54861bbbfb185425}} 
+\index{TreeItem@{TreeItem}!````~TreeItem@{$\sim$TreeItem}}
+\index{````~TreeItem@{$\sim$TreeItem}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{$\sim$TreeItem()}{~TreeItem()}}
+{\footnotesize\ttfamily Tree\+Item\+::$\sim$\+Tree\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tree_item_ac7f432ac0587ca037e80857eefd622f8}\label{class_tree_item_ac7f432ac0587ca037e80857eefd622f8}} 
+\index{TreeItem@{TreeItem}!appendChild@{appendChild}}
+\index{appendChild@{appendChild}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{appendChild()}{appendChild()}}
+{\footnotesize\ttfamily void Tree\+Item\+::append\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}\label{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}} 
+\index{TreeItem@{TreeItem}!child@{child}}
+\index{child@{child}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$ Tree\+Item\+::child (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_item_a14551ec37f50067974fc93aa78b4b6e1}\label{class_tree_item_a14551ec37f50067974fc93aa78b4b6e1}} 
+\index{TreeItem@{TreeItem}!childCount@{childCount}}
+\index{childCount@{childCount}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{childCount()}{childCount()}}
+{\footnotesize\ttfamily int Tree\+Item\+::child\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tree_item_a3314c3678d8ea4dee2f736c32f7b28b9}\label{class_tree_item_a3314c3678d8ea4dee2f736c32f7b28b9}} 
+\index{TreeItem@{TreeItem}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily int Tree\+Item\+::column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}\label{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}} 
+\index{TreeItem@{TreeItem}!data@{data}}
+\index{data@{data}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily QVariant Tree\+Item\+::data (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tree_item_a91b228aa174755563086a48f6a9baaea}\label{class_tree_item_a91b228aa174755563086a48f6a9baaea}} 
+\index{TreeItem@{TreeItem}!itemData@{itemData}}
+\index{itemData@{itemData}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{itemData()}{itemData()}}
+{\footnotesize\ttfamily const QVector$<$ QVariant $>$ \& Tree\+Item\+::item\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}\label{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}} 
+\index{TreeItem@{TreeItem}!parentItem@{parentItem}}
+\index{parentItem@{parentItem}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{parentItem()}{parentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_item}{Tree\+Item}} $\ast$ Tree\+Item\+::parent\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}\label{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}} 
+\index{TreeItem@{TreeItem}!row@{row}}
+\index{row@{row}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily int Tree\+Item\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tree_item_a7bdd3659250b6f3c97c51388ce656997}\label{class_tree_item_a7bdd3659250b6f3c97c51388ce656997}} 
+\index{TreeItem@{TreeItem}!setItemData@{setItemData}}
+\index{setItemData@{setItemData}!TreeItem@{TreeItem}}
+\doxysubsubsection{\texorpdfstring{setItemData()}{setItemData()}}
+{\footnotesize\ttfamily void Tree\+Item\+::set\+Item\+Data (\begin{DoxyParamCaption}\item[{const QVector$<$ QVariant $>$ \&}]{new\+Item\+Data }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{treeitem_8h}{treeitem.\+h}}\item 
+\mbox{\hyperlink{treeitem_8cpp}{treeitem.\+cpp}}\end{DoxyCompactItemize}

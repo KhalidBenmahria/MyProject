@@ -1,0 +1,29 @@
+\hypertarget{shareddata_8h_source}{}\doxysection{shareddata.\+h}
+\mbox{\hyperlink{shareddata_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SHAREDDATA\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SHAREDDATA\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{entry_8h}{entry.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QList>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{directory_8h}{directory.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_shared_data}{SharedData}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_shared_data}{SharedData}}();}
+\DoxyCodeLine{11     QList <Entry*> m\_entries;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keyword}{static} \mbox{\hyperlink{class_shared_data}{SharedData}}* \mbox{\hyperlink{class_shared_data_a77ac93f4c7d18a595d95a73782403d89}{instance}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{comment}{//QList<Entry*> entries();}}
+\DoxyCodeLine{19     \textcolor{comment}{//void setEntries(const QList<Entry> \&newEntries);}}
+\DoxyCodeLine{20     \textcolor{keyword}{const} QList<Entry *> \&\mbox{\hyperlink{class_shared_data_a1b12a70276749c9d13310851de681a41}{entries}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shared_data_aa5c99bb15c60da6f95241a04456cbe9c}{setEntries}}(\textcolor{keyword}{const} QList<Entry *> \&newEntries);}
+\DoxyCodeLine{22 \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SHAREDDATA\_H}}
+
+\end{DoxyCode}

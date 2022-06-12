@@ -1,0 +1,150 @@
+\hypertarget{class_inode_partition}{}\doxysection{Inode\+Partition Class Reference}
+\label{class_inode_partition}\index{InodePartition@{InodePartition}}
+
+
+This class represents a inode partition.  
+
+
+
+
+{\ttfamily \#include $<$inodepartition.\+h$>$}
+
+Inheritance diagram for Inode\+Partition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_inode_partition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inode_partition_aae468c06155d6e6ab200933abe96df53}{Inode\+Partition}} (QString name, int size, bool status, int block\+Size, QTable\+Widget $\ast$table)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_inode_partition}{Inode\+Partition}} Cunstructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_inode_partition_a33428765f3953bf3190dfb4238ea7baf}\label{class_inode_partition_a33428765f3953bf3190dfb4238ea7baf}} 
+\mbox{\hyperlink{class_inode_file}{Inode\+File}} $\ast$ {\bfseries file\+List} () const
+\item 
+void \mbox{\hyperlink{class_inode_partition_a5556270a3461eab091a32de64094b2d9}{add\+File}} (QString path, \mbox{\hyperlink{class_file}{File}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em adds an inode file to the inode partition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inode_partition_a6ee83ef541bd2440097732e17f1e6bf3}{delete\+File}} (QString file\+Path)
+\begin{DoxyCompactList}\small\item\em delets an inode file from the partition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inode_partition_aae8c1b54416b674f377d0bd0167243a0}{delete\+Directory}} (QString path)
+\begin{DoxyCompactList}\small\item\em delets a directory from the partition \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inode_partition_a2382e5b4a8cfcbb73903b1a427e2c8aa}{move\+File\+To\+Front}} (\mbox{\hyperlink{class_entry}{Entry}} $\ast$fp)
+\begin{DoxyCompactList}\small\item\em this method helps with defragmentation, which moves a file to the front \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a inode partition. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_inode_partition_aae468c06155d6e6ab200933abe96df53}\label{class_inode_partition_aae468c06155d6e6ab200933abe96df53}} 
+\index{InodePartition@{InodePartition}!InodePartition@{InodePartition}}
+\index{InodePartition@{InodePartition}!InodePartition@{InodePartition}}
+\doxysubsubsection{\texorpdfstring{InodePartition()}{InodePartition()}}
+{\footnotesize\ttfamily Inode\+Partition\+::\+Inode\+Partition (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{int}]{size,  }\item[{bool}]{status,  }\item[{int}]{block\+Size,  }\item[{QTable\+Widget $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_inode_partition}{Inode\+Partition}} Cunstructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em size} & \\
+\hline
+{\em status} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+{\em table} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_inode_partition_a5556270a3461eab091a32de64094b2d9}\label{class_inode_partition_a5556270a3461eab091a32de64094b2d9}} 
+\index{InodePartition@{InodePartition}!addFile@{addFile}}
+\index{addFile@{addFile}!InodePartition@{InodePartition}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily void Inode\+Partition\+::add\+File (\begin{DoxyParamCaption}\item[{QString}]{path,  }\item[{\mbox{\hyperlink{class_file}{File}} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+adds an inode file to the inode partition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_inode_partition_aae8c1b54416b674f377d0bd0167243a0}\label{class_inode_partition_aae8c1b54416b674f377d0bd0167243a0}} 
+\index{InodePartition@{InodePartition}!deleteDirectory@{deleteDirectory}}
+\index{deleteDirectory@{deleteDirectory}!InodePartition@{InodePartition}}
+\doxysubsubsection{\texorpdfstring{deleteDirectory()}{deleteDirectory()}}
+{\footnotesize\ttfamily void Inode\+Partition\+::delete\+Directory (\begin{DoxyParamCaption}\item[{QString}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+delets a directory from the partition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_inode_partition_a6ee83ef541bd2440097732e17f1e6bf3}\label{class_inode_partition_a6ee83ef541bd2440097732e17f1e6bf3}} 
+\index{InodePartition@{InodePartition}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!InodePartition@{InodePartition}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}}
+{\footnotesize\ttfamily void Inode\+Partition\+::delete\+File (\begin{DoxyParamCaption}\item[{QString}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+delets an inode file from the partition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_inode_partition_a2382e5b4a8cfcbb73903b1a427e2c8aa}\label{class_inode_partition_a2382e5b4a8cfcbb73903b1a427e2c8aa}} 
+\index{InodePartition@{InodePartition}!moveFileToFront@{moveFileToFront}}
+\index{moveFileToFront@{moveFileToFront}!InodePartition@{InodePartition}}
+\doxysubsubsection{\texorpdfstring{moveFileToFront()}{moveFileToFront()}}
+{\footnotesize\ttfamily void Inode\+Partition\+::move\+File\+To\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entry}{Entry}} $\ast$}]{fp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+this method helps with defragmentation, which moves a file to the front 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}{Partition}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inodepartition.\+h\item 
+inodepartition.\+cpp\end{DoxyCompactItemize}
