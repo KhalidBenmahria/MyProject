@@ -1,0 +1,136 @@
+\hypertarget{class_block}{}\doxysection{Block Class Reference}
+\label{class_block}\index{Block@{Block}}
+
+
+Class represents a block. Every block has a status, data (id of the file or f for free) and position representing by index.  
+
+
+
+
+{\ttfamily \#include $<$block.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_aeb7d480d879712d2e3c87fb78a835635}\label{class_block_aeb7d480d879712d2e3c87fb78a835635}} 
+enum \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}} \{ {\bfseries Free} = 0
+, {\bfseries Occupied} = 1
+, {\bfseries Defect} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em The block\+Status enum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_block_a39fbce2fa3bc409351184ca0e2a03faa}{Block}} (int index, \mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}} status, QString data)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_block}{Block}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_af2e4213fed142dc0264772997c017014}\label{class_block_af2e4213fed142dc0264772997c017014}} 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ {\bfseries next\+Block} () const
+\item 
+\mbox{\Hypertarget{class_block_acab42d36f2f38698541d7fbcdae2e5a6}\label{class_block_acab42d36f2f38698541d7fbcdae2e5a6}} 
+void {\bfseries set\+Next\+Block} (\mbox{\hyperlink{class_block}{Block}} $\ast$next\+Block)
+\item 
+\mbox{\Hypertarget{class_block_afc9739395ba3c269636e8066986cf9c6}\label{class_block_afc9739395ba3c269636e8066986cf9c6}} 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ {\bfseries prev\+Block} () const
+\item 
+\mbox{\Hypertarget{class_block_a6ec2dcca2781046e4fa0ff77ffcbce5e}\label{class_block_a6ec2dcca2781046e4fa0ff77ffcbce5e}} 
+void {\bfseries set\+Prev\+Block} (\mbox{\hyperlink{class_block}{Block}} $\ast$prev\+Block)
+\item 
+\mbox{\Hypertarget{class_block_a8cd9d78971c1d740655166fc1e9ec64c}\label{class_block_a8cd9d78971c1d740655166fc1e9ec64c}} 
+int {\bfseries index} () const
+\item 
+\mbox{\Hypertarget{class_block_a08fb67d8f1908100a324601d4c185b54}\label{class_block_a08fb67d8f1908100a324601d4c185b54}} 
+void {\bfseries set\+Index} (int index)
+\item 
+\mbox{\Hypertarget{class_block_a6e26021abdddfbfb1a2ab9da9b01d374}\label{class_block_a6e26021abdddfbfb1a2ab9da9b01d374}} 
+QString {\bfseries data} () const
+\item 
+\mbox{\Hypertarget{class_block_ac2a02357c0beb2012c3d7cc9ca26d398}\label{class_block_ac2a02357c0beb2012c3d7cc9ca26d398}} 
+void {\bfseries set\+Data} (const QString \&data)
+\item 
+\mbox{\Hypertarget{class_block_af23b5c5f69e0f672c9200ca5ce5aac90}\label{class_block_af23b5c5f69e0f672c9200ca5ce5aac90}} 
+QTable\+Widget\+Item $\ast$ {\bfseries item} () const
+\item 
+\mbox{\Hypertarget{class_block_ae577e88f26675aee48ba3123957290e3}\label{class_block_ae577e88f26675aee48ba3123957290e3}} 
+void {\bfseries set\+Item} (QTable\+Widget\+Item $\ast$new\+Item)
+\item 
+\mbox{\Hypertarget{class_block_a9b2770d0af774b120c0e24f29eef881f}\label{class_block_a9b2770d0af774b120c0e24f29eef881f}} 
+\mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}} {\bfseries status} () const
+\item 
+\mbox{\Hypertarget{class_block_ac01438cb2c6c05abd8939d46622b0113}\label{class_block_ac01438cb2c6c05abd8939d46622b0113}} 
+void {\bfseries set\+Status} (\mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}} new\+Status)
+\item 
+void \mbox{\hyperlink{class_block_a2678949e928942868630764c3fdc3d9d}{write\+Block}} (QString data)
+\begin{DoxyCompactList}\small\item\em writes index in the current block (which represents by a column in the gui). This method makes the block Occupied and red \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a39ccb6e0c90388058d0c2e7384af3c49}\label{class_block_a39ccb6e0c90388058d0c2e7384af3c49}} 
+void {\bfseries free\+Block} ()
+\begin{DoxyCompactList}\small\item\em makes the block free and makes it green \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_block_ad12331b07e11544217d40a8dea0ffc59}\label{class_block_ad12331b07e11544217d40a8dea0ffc59}} 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ {\bfseries m\+\_\+next\+Block}
+\item 
+\mbox{\Hypertarget{class_block_a32512bc125ff1749e791083b7343ff7b}\label{class_block_a32512bc125ff1749e791083b7343ff7b}} 
+\mbox{\hyperlink{class_block}{Block}} $\ast$ {\bfseries m\+\_\+prev\+Block}
+\item 
+\mbox{\Hypertarget{class_block_aa60622b84c726f674a13c508c63584b3}\label{class_block_aa60622b84c726f674a13c508c63584b3}} 
+int {\bfseries m\+\_\+index}
+\item 
+\mbox{\Hypertarget{class_block_af0d33bb3c51819a0e6eee93d78845489}\label{class_block_af0d33bb3c51819a0e6eee93d78845489}} 
+\mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}} {\bfseries m\+\_\+status}
+\begin{DoxyCompactList}\small\item\em m\+\_\+status can be Free, Occupied or defect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a0a5a881267038e179aec8ae797d052f3}\label{class_block_a0a5a881267038e179aec8ae797d052f3}} 
+QString {\bfseries m\+\_\+data}
+\begin{DoxyCompactList}\small\item\em m\+\_\+data can be the id or just f which mwans free \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_block_a1648c3444ed7880d43f55a5ea939f194}\label{class_block_a1648c3444ed7880d43f55a5ea939f194}} 
+QTable\+Widget\+Item $\ast$ {\bfseries m\+\_\+item}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class represents a block. Every block has a status, data (id of the file or f for free) and position representing by index. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_block_a39fbce2fa3bc409351184ca0e2a03faa}\label{class_block_a39fbce2fa3bc409351184ca0e2a03faa}} 
+\index{Block@{Block}!Block@{Block}}
+\index{Block@{Block}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{Block()}{Block()}}
+{\footnotesize\ttfamily Block\+::\+Block (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{class_block_aeb7d480d879712d2e3c87fb78a835635}{block\+Status}}}]{status,  }\item[{QString}]{data }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_block}{Block}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em status} & \\
+\hline
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_block_a2678949e928942868630764c3fdc3d9d}\label{class_block_a2678949e928942868630764c3fdc3d9d}} 
+\index{Block@{Block}!writeBlock@{writeBlock}}
+\index{writeBlock@{writeBlock}!Block@{Block}}
+\doxysubsubsection{\texorpdfstring{writeBlock()}{writeBlock()}}
+{\footnotesize\ttfamily void Block\+::write\+Block (\begin{DoxyParamCaption}\item[{QString}]{data }\end{DoxyParamCaption})}
+
+
+
+writes index in the current block (which represents by a column in the gui). This method makes the block Occupied and red 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+block.\+h\item 
+block.\+cpp\end{DoxyCompactItemize}

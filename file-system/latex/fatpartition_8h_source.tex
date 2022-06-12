@@ -1,0 +1,33 @@
+\hypertarget{fatpartition_8h_source}{}\doxysection{fatpartition.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef FATPARTITION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define FATPARTITION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <fatfile.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <partition.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_fat_partition}{FatPartition}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_partition}{Partition}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_fat_partition_ac7a838dad3478565caeecfe124fb4deb}{FatPartition}}(QString name, \textcolor{keywordtype}{int} size, \textcolor{keywordtype}{bool} status, \textcolor{keywordtype}{int} blockSize, QTableWidget* table);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \mbox{\hyperlink{class_fat_partition}{\string~FatPartition}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fat_partition_af46d24ba40aa50071cf63fc56aa0affb}{addFile}}(QString path,  \mbox{\hyperlink{class_file}{File}}* f);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fat_partition_aae9e31700787d903d2cd25a83826ed43}{deleteFile}}(QString filePath);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fat_partition_a61bbd0e8ae895fca368a3f2912af9788}{deleteDirectory}}(QString path);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fat_partition_a08d7f95825cc88b0bc2da6855347480d}{printfFatTable}}();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fat_partition_a9d31186fbcd029bcc750381537b4d8de}{moveFileToFront}}(\mbox{\hyperlink{class_entry}{Entry}}* ep);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{keyword}{private}:}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int}* m\_fatTable;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FATPARTITION\_H}}
+
+\end{DoxyCode}

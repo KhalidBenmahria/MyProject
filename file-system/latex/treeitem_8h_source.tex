@@ -1,0 +1,39 @@
+\hypertarget{treeitem_8h_source}{}\doxysection{treeitem.\+h}
+\mbox{\hyperlink{treeitem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TREEITEM\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TREEITEM\_H}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <QVariant>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{entry_8h}{entry.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_tree_item}{TreeItem}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_tree_item_a2f621e067ee5b718830e8d31876bbbb8}{TreeItem}}(\textcolor{keyword}{const} QVector<QVariant> \&\mbox{\hyperlink{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}{data}}, \mbox{\hyperlink{class_tree_item}{TreeItem}} *\mbox{\hyperlink{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}{parentItem}} = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_tree_item_a859429185d908c3e54861bbbfb185425}{\string~TreeItem}}();}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_item_ac7f432ac0587ca037e80857eefd622f8}{appendChild}}(\mbox{\hyperlink{class_tree_item}{TreeItem}} *\mbox{\hyperlink{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}{child}});}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{class_tree_item}{TreeItem}} *\mbox{\hyperlink{class_tree_item_a80ab3164e41c8a43f1a9ef7255d88249}{child}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}{row}});}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tree_item_a14551ec37f50067974fc93aa78b4b6e1}{childCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tree_item_a3314c3678d8ea4dee2f736c32f7b28b9}{columnCount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     QVariant  \mbox{\hyperlink{class_tree_item_ae1decf8f5fb22c781ada09f397201a2b}{data}}(\textcolor{keywordtype}{int} column) \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{comment}{//Die Funktionen row()und parent()werden verwendet,}}
+\DoxyCodeLine{20     \textcolor{comment}{//um die Zeilennummer und das übergeordnete Element des Elements zu erhalten.}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_tree_item_a91ba04ea12214af828bb198c2b98fa66}{row}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_tree_item}{TreeItem}} *\mbox{\hyperlink{class_tree_item_ab9f8fe7c9bd0c14efa37a91dea40543b}{parentItem}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keyword}{const} QVector<QVariant> \&\mbox{\hyperlink{class_tree_item_a91b228aa174755563086a48f6a9baaea}{itemData}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_item_a7bdd3659250b6f3c97c51388ce656997}{setItemData}}(\textcolor{keyword}{const} QVector<QVariant> \&newItemData);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{private}:}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     QVector<TreeItem*> m\_childItems;}
+\DoxyCodeLine{30     QVector<QVariant> m\_itemData;}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_tree_item}{TreeItem}} *m\_parentItem;}
+\DoxyCodeLine{32 \};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TREEITEM\_H}}
+
+\end{DoxyCode}

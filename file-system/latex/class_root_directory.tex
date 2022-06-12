@@ -1,0 +1,90 @@
+\hypertarget{class_root_directory}{}\doxysection{Root\+Directory Class Reference}
+\label{class_root_directory}\index{RootDirectory@{RootDirectory}}
+
+
+This class represents a root directory.  
+
+
+
+
+{\ttfamily \#include $<$rootdirectory.\+h$>$}
+
+Inheritance diagram for Root\+Directory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_root_directory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_root_directory_ac498aa9cd7f82a3a1f00dbdccd51698e}\label{class_root_directory_ac498aa9cd7f82a3a1f00dbdccd51698e}} 
+{\bfseries Root\+Directory} (QString name)
+\item 
+void \mbox{\hyperlink{class_root_directory_a2f3f22312faa9053daae3011c91eed42}{add\+Directory}} (\mbox{\hyperlink{class_directory}{Directory}} $\ast$dir)
+\begin{DoxyCompactList}\small\item\em add\+Directory. This method checks if the name already exists in the m\+\_\+entrylist. In this case the dir will not be added. Otherwise the dir will be added the m\+\_\+entry\+List \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_root_directory_acfbc46dee192627a88cb818215f6ee24}{delete\+Directory}} (\mbox{\hyperlink{class_directory}{Directory}} $\ast$dir)
+\begin{DoxyCompactList}\small\item\em delete\+Directory. At the beginning this method gets the name of the given dir. It iterates through the entries of m\+\_\+entry\+List and compares the names of the entries whith name of the given dir. If the match, the entry will be deleted \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_directory}{Directory}} $\ast$ \mbox{\hyperlink{class_root_directory_a4fb67818f9aca883a0b6e93e553a61a6}{get\+Directory}} (QString path)
+\begin{DoxyCompactList}\small\item\em get\+Directory. This method iterates through the entries in the root directory. It compares the given folder\+Name with the name of the entrie. if they match, the method checks whether it is a directory.. In this case the directory is returned \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a root directory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_root_directory_a2f3f22312faa9053daae3011c91eed42}\label{class_root_directory_a2f3f22312faa9053daae3011c91eed42}} 
+\index{RootDirectory@{RootDirectory}!addDirectory@{addDirectory}}
+\index{addDirectory@{addDirectory}!RootDirectory@{RootDirectory}}
+\doxysubsubsection{\texorpdfstring{addDirectory()}{addDirectory()}}
+{\footnotesize\ttfamily void Root\+Directory\+::add\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_directory}{Directory}} $\ast$}]{dir }\end{DoxyParamCaption})}
+
+
+
+add\+Directory. This method checks if the name already exists in the m\+\_\+entrylist. In this case the dir will not be added. Otherwise the dir will be added the m\+\_\+entry\+List 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_root_directory_acfbc46dee192627a88cb818215f6ee24}\label{class_root_directory_acfbc46dee192627a88cb818215f6ee24}} 
+\index{RootDirectory@{RootDirectory}!deleteDirectory@{deleteDirectory}}
+\index{deleteDirectory@{deleteDirectory}!RootDirectory@{RootDirectory}}
+\doxysubsubsection{\texorpdfstring{deleteDirectory()}{deleteDirectory()}}
+{\footnotesize\ttfamily void Root\+Directory\+::delete\+Directory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_directory}{Directory}} $\ast$}]{dir }\end{DoxyParamCaption})}
+
+
+
+delete\+Directory. At the beginning this method gets the name of the given dir. It iterates through the entries of m\+\_\+entry\+List and compares the names of the entries whith name of the given dir. If the match, the entry will be deleted 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_root_directory_a4fb67818f9aca883a0b6e93e553a61a6}\label{class_root_directory_a4fb67818f9aca883a0b6e93e553a61a6}} 
+\index{RootDirectory@{RootDirectory}!getDirectory@{getDirectory}}
+\index{getDirectory@{getDirectory}!RootDirectory@{RootDirectory}}
+\doxysubsubsection{\texorpdfstring{getDirectory()}{getDirectory()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_directory}{Directory}} $\ast$ Root\+Directory\+::get\+Directory (\begin{DoxyParamCaption}\item[{QString}]{path }\end{DoxyParamCaption})}
+
+
+
+get\+Directory. This method iterates through the entries in the root directory. It compares the given folder\+Name with the name of the entrie. if they match, the method checks whether it is a directory.. In this case the directory is returned 
+
+
+\begin{DoxyParams}{Parameters}
+{\em folder\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+rootdirectory.\+h\item 
+rootdirectory.\+cpp\end{DoxyCompactItemize}

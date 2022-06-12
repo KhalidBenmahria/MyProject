@@ -1,0 +1,43 @@
+\hypertarget{trremodell_8h_source}{}\doxysection{trremodell.\+h}
+\mbox{\hyperlink{trremodell_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TRREMODELL\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TRREMODELL\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QAbstractItemModel>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{treeitem_8h}{treeitem.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shareddata_8h}{shareddata.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QList>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_trre_modell}{TrreModell}} : \textcolor{keyword}{public} QAbstractItemModel}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     Q\_OBJECT}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_trre_modell_a5bc359ad8e57afe42dc03727f58eca2b}{TrreModell}}(QList <Entry>* entries, QObject *\mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}} = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{comment}{// Header:}}
+\DoxyCodeLine{17     QVariant \mbox{\hyperlink{class_trre_modell_a920156ab06d804ec27c305c607101442}{headerData}}(\textcolor{keywordtype}{int} section, Qt::Orientation orientation, \textcolor{keywordtype}{int} role = Qt::DisplayRole) \textcolor{keyword}{const override};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{comment}{// Basic functionality:}}
+\DoxyCodeLine{21     QModelIndex \mbox{\hyperlink{class_trre_modell_a4d7c9483f57b33786ef016b20fcc83e5}{index}}(\textcolor{keywordtype}{int} row, \textcolor{keywordtype}{int} column,}
+\DoxyCodeLine{22                       \textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}} = QModelIndex()) \textcolor{keyword}{const override};}
+\DoxyCodeLine{23     QModelIndex \mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}}(\textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a4d7c9483f57b33786ef016b20fcc83e5}{index}}) \textcolor{keyword}{const override};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     Qt::ItemFlags \mbox{\hyperlink{class_trre_modell_ac959b42c1755966304f92522a9b6f474}{flags}}(\textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a4d7c9483f57b33786ef016b20fcc83e5}{index}}) \textcolor{keyword}{const override};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_trre_modell_ab106b774f01139926c51cd668a06b9f6}{rowCount}}(\textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}} = QModelIndex()) \textcolor{keyword}{const override};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_trre_modell_a760cfc8c52d8dbe575487f60feb91855}{columnCount}}(\textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}} = QModelIndex()) \textcolor{keyword}{const override};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     QVariant \mbox{\hyperlink{class_trre_modell_ae76563200d4dec6ba8454087a0bfbf6d}{data}}(\textcolor{keyword}{const} QModelIndex \&\mbox{\hyperlink{class_trre_modell_a4d7c9483f57b33786ef016b20fcc83e5}{index}}, \textcolor{keywordtype}{int} role = Qt::DisplayRole) \textcolor{keyword}{const override};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} setupModelData(\textcolor{keyword}{const} QStringList \&lines, \mbox{\hyperlink{class_tree_item}{TreeItem}} *\mbox{\hyperlink{class_trre_modell_a2cedbb0292cced2c54142f63d51840bf}{parent}});}
+\DoxyCodeLine{34      \mbox{\hyperlink{class_tree_item}{TreeItem}} *m\_rootItem;}
+\DoxyCodeLine{35      QList <Entry>* m\_entries;}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TRREMODELL\_H}}
+
+\end{DoxyCode}

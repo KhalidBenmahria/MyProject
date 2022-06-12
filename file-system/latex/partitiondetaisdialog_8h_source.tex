@@ -1,0 +1,57 @@
+\hypertarget{partitiondetaisdialog_8h_source}{}\doxysection{partitiondetaisdialog.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PARTITIONDETAISDIALOG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PARTITIONDETAISDIALOG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QtCore>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QtGui>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QTreeWidgetItem>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <file.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <partition.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}fatpartition.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}disk.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}entrytreemodell.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}creatfiledialog.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}createfolderdialog.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}QMessageBox"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_partition_detais_dialog}{PartitionDetaisDialog}};}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{class_partition_detais_dialog}{PartitionDetaisDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     Q\_OBJECT}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{39     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_partition_detais_dialog_ac96f6ff10947fe975b8ad28af4958443}{PartitionDetaisDialog}}(QWidget *parent = \textcolor{keyword}{nullptr}, \mbox{\hyperlink{class_partition}{Partition}}* partition = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{40     \textcolor{comment}{// Destructor}}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_partition_detais_dialog}{\string~PartitionDetaisDialog}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{comment}{// Setter and Getter}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keyword}{const} QStandardItemModel \&model() \textcolor{keyword}{const};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} setModel(\textcolor{keyword}{const} QStandardItemModel \&newModel);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} addFillButtonClicked();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} on\_addFolderButton\_clicked();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} on\_deleteButton\_clicked();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{private}:}
+\DoxyCodeLine{75     Ui::PartitionDetaisDialog *ui;}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} generateTreeView(\mbox{\hyperlink{class_directory}{Directory}}* rootDirectory);}
+\DoxyCodeLine{84     \mbox{\hyperlink{class_partition}{Partition}}* m\_partition;}
+\DoxyCodeLine{88     QStandardItemModel m\_model;}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PARTITIONDETAISDIALOG\_H}}
+
+\end{DoxyCode}

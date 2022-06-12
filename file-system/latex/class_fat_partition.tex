@@ -1,0 +1,150 @@
+\hypertarget{class_fat_partition}{}\doxysection{Fat\+Partition Class Reference}
+\label{class_fat_partition}\index{FatPartition@{FatPartition}}
+
+
+This class represents a fatpartition.  
+
+
+
+
+{\ttfamily \#include $<$fatpartition.\+h$>$}
+
+Inheritance diagram for Fat\+Partition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fat_partition}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fat_partition_ac7a838dad3478565caeecfe124fb4deb}{Fat\+Partition}} (QString name, int size, bool status, int block\+Size, QTable\+Widget $\ast$table)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_fat_partition}{Fat\+Partition}} Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fat_partition_af46d24ba40aa50071cf63fc56aa0affb}{add\+File}} (QString path, \mbox{\hyperlink{class_file}{File}} $\ast$f)
+\begin{DoxyCompactList}\small\item\em add\+File. This method checks at the beginning if number of the free block is smaller than the number of the number of the file blocks. This means that the fill can not be added. Otherwise the number of free blocks is reduced by the number of file blocks. The file will be added to the directory. The file blocks will be the blocks are distributed randomly \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fat_partition_aae9e31700787d903d2cd25a83826ed43}{delete\+File}} (QString file\+Path)
+\begin{DoxyCompactList}\small\item\em delete\+File. This method delets checks first if the file exists. If it exists. The number of the file blocks will be added to the free blocks and than the file will be removed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fat_partition_a61bbd0e8ae895fca368a3f2912af9788}{delete\+Directory}} (QString path)
+\begin{DoxyCompactList}\small\item\em delete\+Directory. This methods delets first all the files in the directory than the directory. At The end the Fragmentation will be calculated \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fat_partition_a08d7f95825cc88b0bc2da6855347480d}\label{class_fat_partition_a08d7f95825cc88b0bc2da6855347480d}} 
+void {\bfseries printf\+Fat\+Table} ()
+\begin{DoxyCompactList}\small\item\em this method prints a fat tabel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fat_partition_a9d31186fbcd029bcc750381537b4d8de}{move\+File\+To\+Front}} (\mbox{\hyperlink{class_entry}{Entry}} $\ast$ep)
+\begin{DoxyCompactList}\small\item\em this method helps with defragmentation. It moves all blocks to front \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This class represents a fatpartition. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fat_partition_ac7a838dad3478565caeecfe124fb4deb}\label{class_fat_partition_ac7a838dad3478565caeecfe124fb4deb}} 
+\index{FatPartition@{FatPartition}!FatPartition@{FatPartition}}
+\index{FatPartition@{FatPartition}!FatPartition@{FatPartition}}
+\doxysubsubsection{\texorpdfstring{FatPartition()}{FatPartition()}}
+{\footnotesize\ttfamily Fat\+Partition\+::\+Fat\+Partition (\begin{DoxyParamCaption}\item[{QString}]{name,  }\item[{int}]{size,  }\item[{bool}]{status,  }\item[{int}]{block\+Size,  }\item[{QTable\+Widget $\ast$}]{table }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_fat_partition}{Fat\+Partition}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em size} & \\
+\hline
+{\em status} & \\
+\hline
+{\em block\+Size} & \\
+\hline
+{\em table} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fat_partition_af46d24ba40aa50071cf63fc56aa0affb}\label{class_fat_partition_af46d24ba40aa50071cf63fc56aa0affb}} 
+\index{FatPartition@{FatPartition}!addFile@{addFile}}
+\index{addFile@{addFile}!FatPartition@{FatPartition}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily void Fat\+Partition\+::add\+File (\begin{DoxyParamCaption}\item[{QString}]{path,  }\item[{\mbox{\hyperlink{class_file}{File}} $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+add\+File. This method checks at the beginning if number of the free block is smaller than the number of the number of the file blocks. This means that the fill can not be added. Otherwise the number of free blocks is reduced by the number of file blocks. The file will be added to the directory. The file blocks will be the blocks are distributed randomly 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em f} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_fat_partition_a61bbd0e8ae895fca368a3f2912af9788}\label{class_fat_partition_a61bbd0e8ae895fca368a3f2912af9788}} 
+\index{FatPartition@{FatPartition}!deleteDirectory@{deleteDirectory}}
+\index{deleteDirectory@{deleteDirectory}!FatPartition@{FatPartition}}
+\doxysubsubsection{\texorpdfstring{deleteDirectory()}{deleteDirectory()}}
+{\footnotesize\ttfamily void Fat\+Partition\+::delete\+Directory (\begin{DoxyParamCaption}\item[{QString}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+delete\+Directory. This methods delets first all the files in the directory than the directory. At The end the Fragmentation will be calculated 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_fat_partition_aae9e31700787d903d2cd25a83826ed43}\label{class_fat_partition_aae9e31700787d903d2cd25a83826ed43}} 
+\index{FatPartition@{FatPartition}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!FatPartition@{FatPartition}}
+\doxysubsubsection{\texorpdfstring{deleteFile()}{deleteFile()}}
+{\footnotesize\ttfamily void Fat\+Partition\+::delete\+File (\begin{DoxyParamCaption}\item[{QString}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+delete\+File. This method delets checks first if the file exists. If it exists. The number of the file blocks will be added to the free blocks and than the file will be removed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition}{Partition}}.
+
+\mbox{\Hypertarget{class_fat_partition_a9d31186fbcd029bcc750381537b4d8de}\label{class_fat_partition_a9d31186fbcd029bcc750381537b4d8de}} 
+\index{FatPartition@{FatPartition}!moveFileToFront@{moveFileToFront}}
+\index{moveFileToFront@{moveFileToFront}!FatPartition@{FatPartition}}
+\doxysubsubsection{\texorpdfstring{moveFileToFront()}{moveFileToFront()}}
+{\footnotesize\ttfamily void Fat\+Partition\+::move\+File\+To\+Front (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_entry}{Entry}} $\ast$}]{ep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+this method helps with defragmentation. It moves all blocks to front 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_partition_aa4997e7f8c1834b89e8e42acfa04078b}{Partition}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+fatpartition.\+h\item 
+fatpartition.\+cpp\end{DoxyCompactItemize}

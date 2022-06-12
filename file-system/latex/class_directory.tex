@@ -1,0 +1,118 @@
+\hypertarget{class_directory}{}\doxysection{Directory Class Reference}
+\label{class_directory}\index{Directory@{Directory}}
+
+
+This class represents a directory.  
+
+
+
+
+{\ttfamily \#include $<$directory.\+h$>$}
+
+Inheritance diagram for Directory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_directory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_directory_add43ce66fa62674aa6c175e5568ac4e3}{Directory}} (QString name)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_directory}{Directory}} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_directory_a0c731ebb7032a47a45dfc56bb4537f86}\label{class_directory_a0c731ebb7032a47a45dfc56bb4537f86}} 
+const QList$<$ \mbox{\hyperlink{class_entry}{Entry}} $\ast$ $>$ \& {\bfseries get\+Entry\+List} () const
+\item 
+\mbox{\Hypertarget{class_directory_afccd462cdd58b74554152bf865f359ff}\label{class_directory_afccd462cdd58b74554152bf865f359ff}} 
+void {\bfseries set\+Entry\+List} (const QList$<$ \mbox{\hyperlink{class_entry}{Entry}} $\ast$ $>$ \&new\+Entry\+List)
+\item 
+void \mbox{\hyperlink{class_directory_a9ef28b07c89c5ee037a874c27dd35e3f}{add\+File}} (\mbox{\hyperlink{class_file}{File}} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em add only a file to the directory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_directory_a86406c3910618f35b8383d5e51e1fb0e}{remove\+File}} (\mbox{\hyperlink{class_file}{File}} $\ast$entry)
+\begin{DoxyCompactList}\small\item\em removes a file from the directory \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_file}{File}} $\ast$ \mbox{\hyperlink{class_directory_ada7c28dc2b1c72b05eb66b0e73277d21}{get\+File}} (QString filename)
+\begin{DoxyCompactList}\small\item\em gets a specific file from the direcory using the filename \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_directory_acdc87ba34deef5c3a1420cb5fbe28f0a}\label{class_directory_acdc87ba34deef5c3a1420cb5fbe28f0a}} 
+QList$<$ \mbox{\hyperlink{class_entry}{Entry}} $\ast$ $>$ {\bfseries m\+\_\+entry\+List}
+\begin{DoxyCompactList}\small\item\em m\+\_\+entry\+List \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a directory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_directory_add43ce66fa62674aa6c175e5568ac4e3}\label{class_directory_add43ce66fa62674aa6c175e5568ac4e3}} 
+\index{Directory@{Directory}!Directory@{Directory}}
+\index{Directory@{Directory}!Directory@{Directory}}
+\doxysubsubsection{\texorpdfstring{Directory()}{Directory()}}
+{\footnotesize\ttfamily Directory\+::\+Directory (\begin{DoxyParamCaption}\item[{QString}]{name }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_directory}{Directory}} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_directory_a9ef28b07c89c5ee037a874c27dd35e3f}\label{class_directory_a9ef28b07c89c5ee037a874c27dd35e3f}} 
+\index{Directory@{Directory}!addFile@{addFile}}
+\index{addFile@{addFile}!Directory@{Directory}}
+\doxysubsubsection{\texorpdfstring{addFile()}{addFile()}}
+{\footnotesize\ttfamily void Directory\+::add\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file}{File}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+add only a file to the directory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_directory_ada7c28dc2b1c72b05eb66b0e73277d21}\label{class_directory_ada7c28dc2b1c72b05eb66b0e73277d21}} 
+\index{Directory@{Directory}!getFile@{getFile}}
+\index{getFile@{getFile}!Directory@{Directory}}
+\doxysubsubsection{\texorpdfstring{getFile()}{getFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_file}{File}} $\ast$ Directory\+::get\+File (\begin{DoxyParamCaption}\item[{QString}]{filename }\end{DoxyParamCaption})}
+
+
+
+gets a specific file from the direcory using the filename 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+File$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_directory_a86406c3910618f35b8383d5e51e1fb0e}\label{class_directory_a86406c3910618f35b8383d5e51e1fb0e}} 
+\index{Directory@{Directory}!removeFile@{removeFile}}
+\index{removeFile@{removeFile}!Directory@{Directory}}
+\doxysubsubsection{\texorpdfstring{removeFile()}{removeFile()}}
+{\footnotesize\ttfamily void Directory\+::remove\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file}{File}} $\ast$}]{entry }\end{DoxyParamCaption})}
+
+
+
+removes a file from the directory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+directory.\+h\item 
+directory.\+cpp\end{DoxyCompactItemize}
